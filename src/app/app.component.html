@@ -12,7 +12,7 @@
 <div> 
   <h4>npm </h4>
   <svg-icon src="../assets/images/one.svg" 
-  [svgStyle]="getNgStyle()"></svg-icon>
+  [svgStyle]="getNgStyle()" ></svg-icon>
 
   <form class="container" [formGroup]="form" (ngSubmit)="test()">
     <div>
@@ -26,6 +26,9 @@
     </div>
     <div>
       width <input type="number" class="width" min="0" max="50" step="2" formControlName="width">
+    </div>
+    <div>
+      scale <input type="number" class="scale" min="0" max="2" step=".1" formControlName="scale">
     </div>
     <div>
       height <input type="number" class="height" min="0" max="50" step="2" formControlName="height">

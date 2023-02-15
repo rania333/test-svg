@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="no"?> -->
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <!-- <svg
@@ -73,9 +73,9 @@
 </svg> -->
 
 <svg class="group">
-      <circle id="face" cx="85" cy="70" r="50" />
+      <circle id="face" cx="200" cy="70" r="50" />
       <g>
-        <circle class="eye" cx="65" cy="55" r="15" fill="white" />
-        <circle class="eye" cx="105" cy="55" r="15" fill="white"/>
+        <circle class="eye" cx="175" cy="55" r="15" fill="white" />
+        <circle class="eye" cx="215" cy="55" r="15" fill="white"/>
       </g>
 </svg>

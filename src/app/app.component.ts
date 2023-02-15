@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { SvgIconRegistryService } from 'angular-svg-icon/public-api';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,6 @@ import { SvgIconRegistryService } from 'angular-svg-icon/public-api';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  // constructor(public iconReg:SvgIconRegistryService) {
-    // iconReg.loadSvg('one.svg')?.subscribe((res => console.log(res)));
-  // }
 
   public form!: FormGroup;
   constructor( private _fb: FormBuilder){
@@ -19,7 +15,8 @@ export class AppComponent {
       opacity: [.5],
       padding: [2],
       width: [2],
-      height: [2]
+      height: [2],
+      scale: [1]
     })
   }
 
@@ -35,11 +32,15 @@ export class AppComponent {
 		const style: any = {};
 
 		if (!this.formControl['height'].value) {
-			style['height.px'] = 100;
+			style['height.px'] = this.formControl['height'].value;
 		}
 
-		if (!this.formControl['width'].value) {
-			style['width.px'] = 100;
+		if (this.formControl['scale'].value) {
+			style['transform'] = `scale(${this.formControl['scale'].value})`;
+		}
+
+    if (!this.formControl['width'].value) {
+			style['width.px'] = this.formControl['width'].value;
 		}
 
 		style.fill = this.formControl['color'].value;
