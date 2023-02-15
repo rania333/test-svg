@@ -36,3 +36,44 @@
     <input type="submit">
   </form>
 </div>
+
+
+
+<hr/> <hr/>
+<p>manual</p>
+<div class="manual">
+  <svg class="group" [ngStyle]="getNgStyle2()">
+    <circle id="face" cx="70" cy="70" r="50" />
+    <text [attr.x]="formControl2['x'].value" [attr.y]="formControl2['y'].value" [attr.font-weight]="formControl2['w'].value"
+    >{{formControl2['text'].value}}</text>
+</svg>
+</div>
+
+<br>
+<form class="container" [formGroup]="form2" (ngSubmit)="test2()">
+  <div>
+    color <input type="color" class="color" id="color" formControlName="color">
+  </div>
+  <div>
+    opacity <input type="number" class="opacity" min="0" max="1" step=".1" formControlName="opacity">
+  </div>
+  <div>
+    padding <input type="number" class="padding" min="0" max="50" step="2" formControlName="padding">
+  </div>
+  <div>
+    text left <input type="number" min="0" step="5" formControlName="x">
+  </div>
+  <div>
+    text top <input type="number"  min="0" step="5" formControlName="y">
+  </div>
+  <div>
+    scale <input type="number" class="scale" min="0" max="2" step=".1" formControlName="scale">
+  </div>
+  <div>
+    text <input type="text" formControlName="text">
+  </div>
+  <div>
+    text wight <input type="number" min="100" max="900" step="100"formControlName="w">
+  </div>
+  <input type="submit">
+</form>
