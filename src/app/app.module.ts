@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {AngularSvgIconModule} from 'angular-svg-icon'
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms'
+import {AngularDraggableModule} from 'angular2-draggable'
 @NgModule({
   declarations: [
     AppComponent
@@ -16,7 +17,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms'
     AngularSvgIconModule.forRoot(),
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularDraggableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

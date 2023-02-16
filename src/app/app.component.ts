@@ -10,6 +10,7 @@ export class AppComponent {
 
   public form!: FormGroup;
   public form2!: FormGroup;
+  public form3!: FormGroup;
 
   constructor( private _fb: FormBuilder){
     this.form = this._fb.group({
@@ -31,6 +32,14 @@ export class AppComponent {
       y:[140],
       w: [100]
     })
+
+    this.form3 = this._fb.group({
+    
+      width:[100],
+      height:[100],
+      left:[100],
+      top: [100]
+    })
   }
 
   test() {
@@ -46,6 +55,10 @@ export class AppComponent {
   }
   get formControl2() {
     return this.form2.controls
+  }
+
+  get formControl3() {
+    return this.form3.controls
   }
 
   getNgStyle() {
@@ -94,5 +107,15 @@ export class AppComponent {
 
 		return style;
 	}
+
+  newPosition(event: any){
+    const boundingRect = event.currentTarget.getBoundingClientRect();
+    console.log('test', boundingRect);
+    const element = event.currentTarget;
+    const x = element.offsetLeft;
+    const y = element.offsetTop;
+
+    const position = "(" + x+", " + y +")";
+  }
 }
 

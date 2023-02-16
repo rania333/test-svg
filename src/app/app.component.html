@@ -77,3 +77,12 @@
   </div>
   <input type="submit">
 </form>
+
+<hr> <hr>
+<p> resizable & draggable </p>
+<div class="bound-box" #myBounds>
+  <div ngResizable ngDraggable [inBounds]="true" [bounds]="myBounds" 
+  rzContainment="parent" rzHandles="all" class="resizable-widget" 
+  (mouseup)="newPosition($event)">
+  </div>
+</div>
